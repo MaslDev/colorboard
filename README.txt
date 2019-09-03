@@ -1,0 +1,1 @@
+For start project use "docker-compose up"
