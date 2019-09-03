@@ -1,0 +1,27 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block main %}
+    <table id="history">
+        <tr>
+            <th>Number​ ​of​ ​players</th>
+            <th>Number​ ​of​ ​squares​ ​on​ ​the​ ​board​</th>
+            <th>Number​ ​of​ ​cards​ ​in​ ​the​ ​dec​</th>
+            <th>The​ ​characters​ ​representing​ ​the​ ​colored​ ​squares​ ​on​ ​the​ ​board​</th>
+            <th>The​ ​cards​ ​in​ ​the​ ​deck​</th>
+            <th>Winner</th>
+            <th>Cards used</th>
+        </tr>
+
+        {% for item in history %}
+            <tr>
+                <td>{{ item.number_of_players }}</td>
+                <td>{{ item.number_of_squares }}</td>
+                <td>{{ item.number_of_cards }}</td>
+                <td>{{ item.characters_on_board }}</td>
+                <td>{{ item.cards_in_deck }}</td>
+                <td>Player: {{ item.winner }}</td>
+                <td>{{ item.cards_used }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

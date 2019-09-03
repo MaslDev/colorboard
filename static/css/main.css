@@ -1,0 +1,58 @@
+.navbar {
+    background-color: rgba(0, 53, 36, 0.6);
+    font-family: "Times New Roman";
+}
+
+#game-form {
+    width: 50%;
+    margin-left: 25%;
+    font-family: "Times New Roman";
+}
+
+#button-submit {
+    border-radius: 100px;
+    border-color: rgba(0, 53, 36, 0.6) !important;
+    margin-left: 0;
+    color: rgba(0, 53, 36, 0.6) !important;
+    font-weight: bold;
+    font-size: medium;
+}
+
+#button-submit:hover {
+    color: rgba(0, 53, 36, 0.6) !important;
+}
+
+label.error {
+    color: red;
+    font-size: small;
+    font-family: "Times New Roman";
+}
+
+#history {
+    margin-top: 2%;
+    font-family: "Times New Roman";
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+#history td, #history th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#history tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#history tr:hover {
+    background-color: #ddd;
+}
+
+#history th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: rgba(0, 53, 36, 0.6);
+    color: white;
+}

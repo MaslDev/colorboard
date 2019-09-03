@@ -1,0 +1,29 @@
+{% extends 'Base.html' %}
+{% load static %}
+{% block main %}
+    <!-- game form -->
+    <form class="text-center p-5" data-url="/play/" id="game-form">
+        {% csrf_token %}
+        <!-- E-mail -->
+        <input type="number" id="number_of_players" class="form-control mt-3"
+               placeholder="* Number​ ​of​ ​players (1-4)​"
+               name="number_of_players">
+        <input type="number" id="number_of_squares" class="form-control mt-3"
+               placeholder="* Number​ ​of​ ​squares​ ​on​ ​the​ ​board​ (1-79)" name="number_of_squares">
+        <input type="number" id="number_of_cards" class="form-control mt-3"
+               placeholder="* Number​ ​of​ ​cards​ ​in​ ​the​ ​dec​ (1-200)" name="number_of_cards">
+        <textarea id="characters_on_board" class="form-control mt-3"
+                  placeholder="* The​ ​characters​ ​representing​ ​the​ ​colored​ ​squares​ ​on​ ​the​ ​board​ ​(as​ ​a​ ​string).​"
+                  name="characters_on_board"></textarea>
+        <textarea id="cards_in_deck" class="form-control mt-3"
+                  placeholder="* The​ ​cards​ ​in​ ​the​ ​deck​ ​(as​ ​a​ ​comma​ ​separated​ ​string).​"
+                  name="cards_in_deck"></textarea>
+        <!-- game-form submit -->
+        <button id="button-submit" class="btn btn-outline-success btn-block waves-effect mt-3" type="submit">Play</button>
+    </form>
+    <!-- game form -->
+{% endblock %}
+
+{% block extrajs %}
+    <script src="{% static 'js/uvik_colorboard_app/game-form.js' %}"></script>
+{% endblock %}
